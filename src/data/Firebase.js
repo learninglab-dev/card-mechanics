@@ -1,7 +1,13 @@
-import { useState, useEffect } from 'react'
+import {
+  useState,
+  useEffect,
+  createContext
+} from 'react'
 import firebase from 'firebase'
-import { firebaseConfig } from './firebase.config'
+import firebaseConfig from './firebase.config'
 import AppRouter from '../Router'
+
+export const Ready = createContext()
 
 
 export default function Firebase() {
@@ -16,5 +22,9 @@ export default function Firebase() {
     return () => firebase.app().delete()
   }, [])
 
-  return <AppRouter ready={instance}/>
+  return (
+    <Ready.Provider value={instance}>
+      <AppRouter/>
+    </Ready.Provider>
+  )
 }

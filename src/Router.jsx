@@ -3,12 +3,12 @@ import {
   Switch,
   Route
 } from 'react-router-dom'
-import Start from '../views/Start'
-import Test from '../views/Test'
-import GetCards from '../data/GetCards'
+import Start from './views/Start'
+// import Test from './views/Test'
+import GetCards from './data/GetCards'
 
 
-export default function AppRouter({ ready }) {
+export default function AppRouter() {
   return (
     <Router>
       <Switch>
@@ -16,10 +16,7 @@ export default function AppRouter({ ready }) {
           <Start/>
         </Route>
         <Route path='/:deck'>
-          <GetCards fbReady={ready}/>
-        </Route>
-        <Route path='/test'>
-          <Test/>
+          <GetCards/>
         </Route>
       </Switch>
     </Router>

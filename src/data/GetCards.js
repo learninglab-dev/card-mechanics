@@ -8,9 +8,11 @@ import firebase from 'firebase'
 import firebaseConfig from './firebase.config'
 import { useParams } from 'react-router-dom'
 import { Ready } from './Firebase'
+// import Gallery from '../views/Gallery'
 
 
 export default function GetCards() {
+  const [cards, setCards] = useState(null)
   const { deck } = useParams()
   const ready = useContext(Ready)
 
@@ -20,11 +22,10 @@ export default function GetCards() {
       db.ref(`/${deck}`)
           .once('value')
           .then(snapshot => {
-            return snapshot.val() ?? null
-      })
+            setCards(snapshot.val() ?? null)
+          })
     }
+  }, [ready, deck])
 
-  }, [ready])
-
-  return <Gallery cards={cards}/>
+  return JSON.stringify(cards)
 }
