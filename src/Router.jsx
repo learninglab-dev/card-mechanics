@@ -15,7 +15,7 @@ export default function AppRouter({ ready }) {
         <Route exact path='/'>
           <Start/>
         </Route>
-        <Route path='/seamonsters'>
+        <Route path='/:deck'>
           <GetCards fbReady={ready}/>
         </Route>
         <Route path='/test'>
