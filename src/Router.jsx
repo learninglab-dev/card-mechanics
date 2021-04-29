@@ -3,9 +3,9 @@ import {
   Switch,
   Route
 } from 'react-router-dom'
-import Start from '../views/Start'
-import Test from '../views/Test'
-import GetCards from '../data/GetCards'
+import Start from './views/Start'
+import Gallery from './views/Gallery'
+// import GetCards from '../data/GetCards'
 
 
 export default function AppRouter({ ready }) {
@@ -15,11 +15,11 @@ export default function AppRouter({ ready }) {
         <Route exact path='/'>
           <Start/>
         </Route>
-        <Route path='/seamonsters'>
-          <GetCards fbReady={ready}/>
-        </Route>
+        {/*<Route path='/seamonsters'>*/}
+        {/*  <GetCards fbReady={ready}/>*/}
+        {/*</Route>*/}
         <Route path='/test'>
-          <Test/>
+          <Gallery/>
         </Route>
       </Switch>
     </Router>
