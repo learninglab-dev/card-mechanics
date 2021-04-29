@@ -5,10 +5,11 @@ import {
 } from 'react-router-dom'
 import Start from './views/Start'
 import Gallery from './views/Gallery'
-// import GetCards from '../data/GetCards'
+import GetCards from './data/GetCards'
 
 
-export default function AppRouter({ ready }) {
+
+export default function AppRouter() {
   return (
     <Router>
       <Switch>
@@ -20,6 +21,9 @@ export default function AppRouter({ ready }) {
         {/*</Route>*/}
         <Route path='/test'>
           <Gallery/>
+        </Route>
+        <Route path='/:deck'>
+          <GetCards/>
         </Route>
       </Switch>
     </Router>
