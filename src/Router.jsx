@@ -3,11 +3,15 @@ import {
   Switch,
   Route
 } from 'react-router-dom'
+
 import Start from './views/Start'
-import Gallery from './views/Gallery'
-import GetCards from './data/GetCards'
+// import Gallery from './views/Gallery'
+// import GetCards from './data/GetCards'
 import GamePage from './views/GamePage'
 
+import LaunchGame from './views/LaunchGame'
+import GetCards from './data/GetCards'
+import Home from './views/Home'
 
 
 export default function AppRouter() {
@@ -15,7 +19,7 @@ export default function AppRouter() {
     <Router>
       <Switch>
         <Route exact path='/'>
-          <Start/>
+          <Home/>
         </Route>
         <Route path='/game'>
           <GamePage/>
