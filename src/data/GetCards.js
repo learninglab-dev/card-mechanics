@@ -2,22 +2,35 @@
 import {
   useState,
   useEffect,
-  useContext
+  useContext,
+  createContext
 } from 'react'
 import firebase from 'firebase'
-import firebaseConfig from './firebase.config'
-import { useParams } from 'react-router-dom'
+import {
+  useParams,
+  Link,
+  Route,
+  Switch,
+  useHistory,
+  useLocation,
+  useRouteMatch
+} from 'react-router-dom'
 import { Ready } from './Firebase'
 // import Gallery from '../views/Gallery'
+import LaunchGame from '../views/LaunchGame'
 
 
 export default function GetCards() {
+  const ready = useContext(Ready)
   const [cards, setCards] = useState(null)
   const { deck } = useParams()
-  const ready = useContext(Ready)
+  const history = useHistory()
+  const playing = useRouteMatch('/monsters/memorygame')?.isExact
+
 
   useEffect(() => {
     if (ready) {
+      console.log('running')
       const db = firebase.database()
       db.ref(`/${deck}`)
           .once('value')
@@ -27,5 +40,19 @@ export default function GetCards() {
     }
   }, [ready, deck])
 
-  return JSON.stringify(cards)
+  return (
+    <>
+      {!playing &&
+        <>
+        <div>
+          {JSON.stringify(cards)}
+        </div>
+        <button onClick={() => history.push(`/${deck}/memorygame`)}>play memory game!</button>
+        </>
+      }
+      <Route path='/:deck/memorygame'>
+        <LaunchGame cards={cards}/>
+      </Route>
+    </>
+  )
 }
