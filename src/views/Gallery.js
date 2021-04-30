@@ -1,5 +1,5 @@
 // import GetCards from "./data/GetCards"
-import Tooltip from "../hooks/Tooltip"
+// import Tooltip from "../hooks/Tooltip"
 import Card from "./Card"
 
 const data = [
@@ -70,16 +70,17 @@ const data = [
 
 const styles={
     gallery: {
-        // padding: "6vh 2vw",
+        width: "auto",
+        padding: "6vh 2vw",
         display: "flex",
         flexWrap: "wrap",
         flexDirection: "row",
-        justifyContent: "center",
+        justifyContent: "space-evenly",
         position: "relative",
     },
     card: {
         width: '20vw',
-        height: '30vw',
+        // height: '30vw',
         // margin: "15px",
         cursor: "pointer",
         overflow: "hidden",

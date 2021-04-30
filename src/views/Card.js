@@ -8,7 +8,7 @@ export default function Card ({data,key,style,bool}){
     const texttodisplay = {name: data.name, creator: data.by, attack: data.mainAttack}
 
     // there's definitely a better way to do this with state, but for now....
-    if (bool==true){
+    if (bool===true){
         return (
             <div className="card" style={tileStyle}>
                 <Tooltip text={texttodisplay}>
