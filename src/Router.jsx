@@ -20,9 +20,9 @@ export default function AppRouter() {
         <Route path='/game'>
           <GamePage/>
         </Route>
-        <Route path='/gallery'>
-          <Gallery/>
-        </Route>
+        {/*<Route path='/gallery'>*/}
+        {/*  <Gallery/>*/}
+        {/*</Route>*/}
         <Route path='/:deck'>
           <GetCards/>
         </Route>
