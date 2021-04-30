@@ -6,6 +6,7 @@ import {
 import Start from './views/Start'
 import Gallery from './views/Gallery'
 import GetCards from './data/GetCards'
+import GamePage from './views/GamePage'
 
 
 
@@ -16,10 +17,10 @@ export default function AppRouter() {
         <Route exact path='/'>
           <Start/>
         </Route>
-        {/*<Route path='/seamonsters'>*/}
-        {/*  <GetCards fbReady={ready}/>*/}
-        {/*</Route>*/}
-        <Route path='/test'>
+        <Route path='/game'>
+          <GamePage/>
+        </Route>
+        <Route path='/gallery'>
           <Gallery/>
         </Route>
         <Route path='/:deck'>
