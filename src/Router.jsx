@@ -10,7 +10,7 @@ import GetCards from './data/GetCards'
 import Nav from './views/Nav'
 import About from "./views/About";
 import Gallery from "./views/Gallery";
-import DataProvider, {DataContext} from "./contexts/DataContext";
+import DataProvider from "./contexts/DataContext";
 import CardFlip from './views/CardFlip'
 
 export default function AppRouter() {

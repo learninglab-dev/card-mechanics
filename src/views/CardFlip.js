@@ -1,23 +1,40 @@
 import React from "react";
+import Card from "./Card";
+import '../style.css'
 
 
 // have a single card with "up image" and "down image"
-const card = {upImage: "https://i.pinimg.com/originals/1c/0a/0f/1c0a0f33fde5b9afa92ca044273a8750.jpg", downImage:"https://i.redd.it/6esxupxwcf1z.jpg"}
+const cards = [
+        {
+            id:"Monster",
+            upImage: "https://i.pinimg.com/originals/1c/0a/0f/1c0a0f33fde5b9afa92ca044273a8750.jpg",
+            downImage:"https://i.redd.it/6esxupxwcf1z.jpg"
+        }, {
+            id:"Monster2" ,
+            upImage: "https://i.pinimg.com/originals/1c/0a/0f/1c0a0f33fde5b9afa92ca044273a8750.jpg",
+            downImage:"https://i.redd.it/6esxupxwcf1z.jpg"
+        }
+    ]
 
-console.log(card.upImage)
 
-const style = {
+const styles={
     card: {
-        width: "200px",
-        height: "auto",
-        // margin: "15px",
+        width: "300px",
+        cursor: "pointer",
         overflow: "hidden",
-        justifyItems: "center"
     }
 }
 
+
 export default function CardFlip(){
+
     const [flipped, setFlipped] = React.useState(false)
+    // const [endOfTurn, setEndOfTurn] = React.useState(false)
+    // const [matches, setMatches] = React.useState(0)
+
+    //
+
+
 
     const handleFlip=(e)=>{
         e.preventDefault()
@@ -28,11 +45,12 @@ export default function CardFlip(){
 
 
     return(
-        <div className="card" style={style.card}>
+        <div className="card2" >
             <img
-                src={flipped === true? card.upImage : card.downImage}
-                alt={'UpImage'}
+                src={flipped === true ? cards[0].upImage : cards[0].downImage}
+                alt={cards[0].id}
                 onClick={handleFlip}
+                style={styles.card}
             />
         </div>
     )

@@ -199,9 +199,10 @@ const styles= {
 export default function Board (){
     const data = useContext(DataContext)
 
+
     //random shuffle slice of data into 6, 9, or 12
     //each card is shown twice
-    const diffLevel = 24; //18, 24
+    const diffLevel = 12; //18, 24
 
     return (
         <div className="game" >
@@ -209,8 +210,8 @@ export default function Board (){
                 Memory Game
             </h1>
             <div className="board" style={styles.board}>
-                {data.slice(0,diffLevel).map((data) => {
-                    return <Card data={data} key={data.id} style={styles.card} bool={false} />
+                {data.slice(0,diffLevel).map((data, index) => {
+                    return <Card data={data} style={styles.card} bool={false} />
                 })}
             </div>
         </div>

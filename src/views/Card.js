@@ -1,12 +1,14 @@
 import React from 'react'
 import Tooltip from '../hooks/Tooltip'
 
+const downImage ="https://i.redd.it/6esxupxwcf1z.jpg"
 
-export default function Card ({data,key,style,bool}){
+export default function Card ({data, style,bool}){
     let tileStyle = style;
-
-    const texttodisplay = {name: data.name, creator: data.by, attack: data.mainAttack}
-
+    // let image be up or down
+    //
+    const texttodisplay = {name: data.name, creator: data.by}
+    //
     // there's definitely a better way to do this with state, but for now....
     if (bool===true){
         return (
