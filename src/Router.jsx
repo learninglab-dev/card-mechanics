@@ -34,7 +34,7 @@ export default function AppRouter() {
             <Route path='/cardflip'>
               <CardFlip/>
             </Route>
-            <Route path='/:deck'>
+            <Route path='/monsters'>
               <GetCards/>
             </Route>
           </Switch>

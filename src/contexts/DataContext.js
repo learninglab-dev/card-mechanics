@@ -177,8 +177,6 @@ const data = [
 // This context provider is passed to any component requiring the context
 export default function DataProvider({ children }){
     const [monsterData, setMonsterData] = useState(data)
-
-    console.log(monsterData)
     return (
         <DataContext.Provider
             value={monsterData}
