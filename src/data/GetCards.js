@@ -16,7 +16,6 @@ import {
   useRouteMatch
 } from 'react-router-dom'
 import { Ready } from './Firebase'
-// import Gallery from '../views/Gallery'
 import LaunchGame from '../views/LaunchGame'
 
 
@@ -39,6 +38,8 @@ export default function GetCards() {
           })
     }
   }, [ready, deck])
+
+  // return (cards)
 
   return (
     <>

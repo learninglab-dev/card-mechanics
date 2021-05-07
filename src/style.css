@@ -1,9 +1,65 @@
+
+html, body, #app {
+    height: 100%;
+    width: 100%;
+    padding: 10px;
+}
+
+.container{
+    width: 80vw;
+    height: auto
+}
+
 .center-text {
     text-align: center;
 }
 
 .header-lg {
-    font-size: 35px;
+    font-size: 75px;
     font-weight: 300;
-    margin: 20px;
+    /*margin: 20px;*/
+    margin-left: 30px;
+}
+.header-md {
+    font-size: 30px;
+    font-weight: 300;
+}
+.justify-content-right{
+    justify-content: right;
+}
+
+.justify-content-left{
+    justify-content: left;
+}
+
+.space-between {
+    justify-content: space-between;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+}
+
+.nav-link {
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: none;
+    color: inherit;
+}
+
+.nav li {
+    padding: 25pt 10pt 10pt 10pt;
+    list-style-type: none;
+    justify-content: right;
+}
+
+.menu-right {
+    float: right;
+}
+
+
+
+.space-between {
+    justify-content: space-between;
 }

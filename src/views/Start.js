@@ -3,14 +3,12 @@
 import React from 'react';
 import Gallery from "./Gallery";
 import '../style.css'
+import GetCards from "../data/GetCards";
 
 export default function Start() {
 
   return (
-      <div className = "container">
-        <h1 className = 'center-text header-lg'>
-          SEA MONSTERS
-        </h1>
+      <div className = "container" >
           <Gallery/>
       </div>
   )

@@ -4,33 +4,42 @@ import {
   Route
 } from 'react-router-dom'
 
-import Start from './views/Start'
-// import Gallery from './views/Gallery'
-// import GetCards from './data/GetCards'
+// import Start from './views/Start'
 import GamePage from './views/GamePage'
-
-import LaunchGame from './views/LaunchGame'
 import GetCards from './data/GetCards'
-import Home from './views/Home'
-
+import Nav from './views/Nav'
+import About from "./views/About";
+import Gallery from "./views/Gallery";
+import DataProvider, {DataContext} from "./contexts/DataContext";
+import CardFlip from './views/CardFlip'
 
 export default function AppRouter() {
+
+
   return (
+
     <Router>
-      <Switch>
-        <Route exact path='/'>
-          <Home/>
-        </Route>
-        <Route path='/game'>
-          <GamePage/>
-        </Route>
-        {/*<Route path='/gallery'>*/}
-        {/*  <Gallery/>*/}
-        {/*</Route>*/}
-        <Route path='/:deck'>
-          <GetCards/>
-        </Route>
-      </Switch>
+      <DataProvider>
+        <Nav/>
+          <Switch>
+            <Route exact path='/'>
+              <Gallery/>
+            </Route>
+            <Route path='/game'>
+              <GamePage/>
+            </Route>
+            <Route path='/about'>
+              <About/>
+            </Route>
+            <Route path='/cardflip'>
+              <CardFlip/>
+            </Route>
+            <Route path='/:deck'>
+              <GetCards/>
+            </Route>
+          </Switch>
+      </DataProvider>
     </Router>
+
   )
 }

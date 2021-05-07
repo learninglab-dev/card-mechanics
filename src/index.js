@@ -1,13 +1,13 @@
 import * as React from 'react'
 import ReactDOM from 'react-dom'
 import reportWebVitals from './reportWebVitals'
-import Router from './Router'
+import Firebase from './data/Firebase'
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 ReactDOM.render(
   <React.StrictMode>
-    <Router />
+        <Firebase />
   </React.StrictMode>,
   document.getElementById('root')
 );
