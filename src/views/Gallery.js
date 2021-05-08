@@ -2,7 +2,8 @@
 // import Tooltip from "../hooks/Tooltip"
 import '../style.css'
 import Card from "./Card"
-import {DataContext} from "../contexts/DataContext";
+// import {DataContext} from "../contexts/DataContext";
+import {DataContext} from "../data/GetCards";
 import React, {useContext} from 'react'
 // const data = [
 //     {

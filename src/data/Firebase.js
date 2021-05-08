@@ -6,7 +6,7 @@ import {
 import firebase from 'firebase'
 import firebaseConfig from './firebase.config'
 import AppRouter from '../Router'
-
+import GetCards from "./GetCards";
 export const Ready = createContext()
 
 
@@ -24,7 +24,7 @@ export default function Firebase() {
 
   return (
     <Ready.Provider value={instance}>
-      <AppRouter/>
+      <GetCards/>
     </Ready.Provider>
   )
 }

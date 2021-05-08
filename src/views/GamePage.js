@@ -2,7 +2,7 @@
 // import React, {useState,useEffect} from "react";
 import React, {useContext} from 'react'
 import Card from './Card'
-import DataProvider, {DataContext} from "../contexts/DataContext";
+import {DataContext} from "../data/GetCards";
 import '../style.css'
 
 const styles= {
@@ -202,7 +202,7 @@ export default function Board (){
 
     //random shuffle slice of data into 6, 9, or 12
     //each card is shown twice
-    const diffLevel = 12; //18, 24
+    const diffLevel = 24; //18, 24
 
     return (
         <div className="game" >

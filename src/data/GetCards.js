@@ -1,5 +1,5 @@
 /** @jsxImportSource theme-ui */
-import {
+import React, {
   useState,
   useEffect,
   useContext,
@@ -17,14 +17,16 @@ import {
 } from 'react-router-dom'
 import { Ready } from './Firebase'
 import LaunchGame from '../views/LaunchGame'
+import AppRouter from "../Router";
 
+export const DataContext = createContext();
 
 export default function GetCards() {
   const ready = useContext(Ready)
   const [cards, setCards] = useState(null)
-  const { deck } = useParams()
-  const history = useHistory()
-  const playing = useRouteMatch('/monsters/memorygame')?.isExact
+  const deck = 'monsters' //useParams()
+  // const history = useHistory()
+  // const playing = useRouteMatch('/monsters/memorygame')?.isExact
 
 
   useEffect(() => {
@@ -43,17 +45,16 @@ export default function GetCards() {
 
   return (
     <>
-      {!playing &&
-        <>
-        <div>
-          {JSON.stringify(cards)}
-        </div>
-        <button onClick={() => history.push(`/${deck}/memorygame`)}>play memory game!</button>
-        </>
+      {!cards &&
+        'Loading'
       }
-      <Route path='/:deck/memorygame'>
-        <LaunchGame cards={cards}/>
-      </Route>
+      {cards &&
+        <DataContext.Provider
+            value={cards}
+        >
+          <AppRouter/>
+        </DataContext.Provider>
+      }
     </>
   )
 }

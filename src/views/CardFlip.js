@@ -3,6 +3,7 @@ import Card from "./Card";
 import '../style.css'
 
 
+
 // have a single card with "up image" and "down image"
 const cards = [
         {
