@@ -2,11 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ade28a09-abae-4d48-80c4-d0e4c0c46d45" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/views/GamePage2.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/views/outline.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Router.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Router.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/data/Firebase.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/Firebase.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/data/GetCards.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/GetCards.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/CardFlip.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/CardFlip.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/Card.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/Card.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/views/Gallery.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/Gallery.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/views/GamePage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/GamePage.js" afterDir="false" />
     </list>
@@ -36,9 +38,11 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$USER_HOME$/WebstormProjects/tictactoe" />
     <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.standard" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.standard" value="" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="settings.nodejs" />
+    <property name="settings.editor.selected.configurable" value="preferences.editor" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
@@ -59,6 +63,10 @@
       <workItem from="1620089271818" duration="460000" />
       <workItem from="1620089743902" duration="345000" />
       <workItem from="1620163287083" duration="29106000" />
+      <workItem from="1621624201381" duration="3987000" />
+      <workItem from="1622031946796" duration="17329000" />
+      <workItem from="1622122430934" duration="595000" />
+      <workItem from="1622139948310" duration="9956000" />
     </task>
     <servers />
   </component>
@@ -75,6 +83,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
