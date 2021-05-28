@@ -39,7 +39,7 @@ export default function Nav(){
                         About
                     </NavLink>
                 </li>
-{/*                <li>
+                <li>
                     <NavLink
                         to={'/cardflip'}
                         exact
@@ -48,15 +48,15 @@ export default function Nav(){
                         Testing
                     </NavLink>
                 </li>
-                <li>
-                    <NavLink
-                        to={'/monsters'}
-                        exact
-                        activeStyle = {activeStyle}
-                        className = 'nav-link'>
-                        Monsters
-                    </NavLink>
-                </li>*/}
+                {/*<li>*/}
+                {/*    <NavLink*/}
+                {/*        to={'/monsters'}*/}
+                {/*        exact*/}
+                {/*        activeStyle = {activeStyle}*/}
+                {/*        className = 'nav-link'>*/}
+                {/*        Monsters*/}
+                {/*    </NavLink>*/}
+                {/*</li>*/}
             </ul>
         </nav>
 

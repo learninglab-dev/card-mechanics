@@ -10,6 +10,23 @@ html, body, #app {
     height: auto
 }
 
+.btn {
+    display:inline-block;
+    padding:0.35em 1.2em;
+    border:0.1em solid #FFFFFF;
+    margin:0 0.3em 0.3em 0;
+    border-radius:0.12em;
+    box-sizing: border-box;
+    text-decoration:none;
+    font-family:'Roboto',sans-serif;
+    font-weight:bold;
+    color:#FFFFFF;
+    text-align:center;
+    transition: all 0.2s;
+}
+
+
+
 .center-text {
     text-align: center;
 }
@@ -24,6 +41,20 @@ html, body, #app {
     font-size: 30px;
     font-weight: 300;
 }
+
+.header-sm {
+    font-size: 24px;
+    font-weight: 200;
+}
+
+.centered {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    /* bring your own prefixes */
+    transform: translate(-50%, -50%)
+}
+
 .justify-content-right{
     justify-content: right;
 }

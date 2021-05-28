@@ -1,45 +1,70 @@
 /** @jsxImportSource theme-ui */
-import { useParams } from 'react-router-dom'
+import React from "react";
+import Card from "./Card";
+import '../style.css'
+import Game from './GamePage2'
 
-export default function LaunchGame({ cards }) {
-  const { deck } = useParams()
-  console.log('here')
+
+export default function LaunchGame(){
+  const [diffLevel, setDiffLevel] = React.useState(null)
+  const [score, setScore] = React.useState(null)
+
+  React.useEffect(() => {
+    // Loads when the game starts
+  }, [])
 
   return (
-    <div>
-      <p>here's the game</p>
-      {JSON.stringify(cards)}
-    </div>
+      <div>
+        <div className="container">
+          <h1 className="header-md center-text">
+            Memory Game
+          </h1>
+          <div className={"center-text"}>
+            {diffLevel === null ? (
+                < >
+                  <button className={"btn"} onClick={() => setDiffLevel(6)}>Easy</button>
+                  <button className={"btn"} onClick={() => setDiffLevel(9)}>Medium</button>
+                  <button className={"btn"} onClick={() => setDiffLevel(12)}>Hard</button>
+                </>
+            ) : (
+                <>
+                  <button className={"btn"}
+                          onClick={() =>
+                              setTimeout(() => {
+                                setDiffLevel(null)
+                              }, 250)}
+                  >
+                    Start Over
+                  </button>
+
+                </>
+
+                // <>
+                //     <button
+                //         onClick={() => {
+                //             const prevOptions = options
+                //             setOptions(null)
+                //             setTimeout(() => {
+                //                 setOptions(prevOptions)
+                //             }, 5)
+                //         }}
+                //     >
+                //         Start Over
+                //     </button>
+                //     <button onClick={() => setOptions(null)}>Main Menu</button>
+                // </>
+            )}
+          </div>
+        </div>
+
+        {diffLevel ? (
+            <Game
+                diffLevel={diffLevel}
+                score={score}
+            />
+        ) : (
+            <h2 className={"centered"}>Choose a difficulty to begin!</h2>
+        )}
+      </div>
   )
 }
-
-//Game state
-  // - number of cards
-  // - state for each card flipped or not
-  // - turn info, whether to flip card back upside down
-  // - object with card as single entry, with id, turn (bool), flip (bool)
-  // { 1: { key: monster1, turn: , flip: }, 2: {key, turn, flip}, ...}
-
-
-// gameData = {
-//   cards: {
-//     1: {type: [from data], faceUp: false}
-//     2: ...
-//   },
-//   endOfTurn: false, (tracks every two card flips -> match fxn (flip or don't flip))
-//   numMatches: 4/8/16, (doesn't need to be state, just cards.length)
-//   matches: 0,
-//   startTime: null,
-//   endTime: null,
-//   endOfGame: false,
-// }
-
-// Game Play
-  // choose difficulty
-  // number of cards x 2
-  // set board, nothing is flipped, turn = 0, start timer
-  // flip two cards
-  //  if cards don't match, flip them back over
-  //  if cards match, keep them right side up
-  // new turn
-  // rinse and repeat until all cards are matched, stop timer

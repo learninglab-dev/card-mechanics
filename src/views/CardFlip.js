@@ -1,6 +1,7 @@
 import React from "react";
 import Card from "./Card";
 import '../style.css'
+import Game from './GamePage2'
 
 
 
@@ -27,32 +28,65 @@ const styles={
 }
 
 
-export default function CardFlip(){
+export default function LaunchGame(){
+    const [diffLevel, setDiffLevel] = React.useState(null)
+    const [score, setScore] = React.useState(null)
 
-    const [flipped, setFlipped] = React.useState(false)
-    // const [endOfTurn, setEndOfTurn] = React.useState(false)
-    // const [matches, setMatches] = React.useState(0)
+    React.useEffect(() => {
+        // Loads when the game starts
+    }, [])
 
-    //
+    return (
+        <div>
+            <div className="container">
+                <h1 className="header-md center-text">
+                    Memory Game
+                </h1>
+                <div className={"center-text"}>
+                    {diffLevel === null ? (
+                        < >
+                            <button className={"btn"} onClick={() => setDiffLevel(6)}>Easy</button>
+                            <button className={"btn"} onClick={() => setDiffLevel(9)}>Medium</button>
+                            <button className={"btn"} onClick={() => setDiffLevel(12)}>Hard</button>
+                        </>
+                    ) : (
+                        <>
+                            <button className={"btn"}
+                                    onClick={() =>
+                                        setTimeout(() => {
+                                            setDiffLevel(null)
+                                        }, 250)}
+                            >
+                            Start Over
+                            </button>
+                        </>
 
+                        // <>
+                        //     <button
+                        //         onClick={() => {
+                        //             const prevOptions = options
+                        //             setOptions(null)
+                        //             setTimeout(() => {
+                        //                 setOptions(prevOptions)
+                        //             }, 5)
+                        //         }}
+                        //     >
+                        //         Start Over
+                        //     </button>
+                        //     <button onClick={() => setOptions(null)}>Main Menu</button>
+                        // </>
+                    )}
+                </div>
+            </div>
 
-
-    const handleFlip=(e)=>{
-        e.preventDefault()
-        flipped ===true ? setFlipped(false): setFlipped(true)
-    }
-
-    console.log(flipped)
-
-
-    return(
-        <div className="card2" >
-            <img
-                src={flipped === true ? cards[0].upImage : cards[0].downImage}
-                alt={cards[0].id}
-                onClick={handleFlip}
-                style={styles.card}
-            />
+            {diffLevel ? (
+                <Game
+                    diffLevel={diffLevel}
+                    score={score}
+                />
+            ) : (
+                <h2 className={"centered"}>Choose a difficulty to begin!</h2>
+            )}
         </div>
-    )
+   )
 }

@@ -13,6 +13,7 @@ import Gallery from "./views/Gallery";
 import DataProvider from "./contexts/DataContext";
 import CardFlip from './views/CardFlip'
 import GamePage2 from './views/GamePage2'
+import LaunchGame from "./views/LaunchGame";
 
 export default function AppRouter() {
 
@@ -22,19 +23,20 @@ export default function AppRouter() {
     <Router>
       <DataProvider>
         <Nav/>
+        <hr/>
           <Switch>
             <Route exact path='/'>
               <Gallery/>
             </Route>
             <Route path='/game'>
-              <GamePage2/>
+              <LaunchGame/>
             </Route>
             <Route path='/about'>
               <About/>
             </Route>
-            {/*<Route path='/cardflip'>*/}
-            {/*  <GamePage2/>*/}
-            {/*</Route>*/}
+            <Route path='/cardflip'>
+              <CardFlip/>
+            </Route>
           </Switch>
       </DataProvider>
     </Router>
