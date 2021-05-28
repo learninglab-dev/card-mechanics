@@ -6,8 +6,6 @@ import {DataContext} from "../data/GetCards";
 import '../style.css'
 import image1 from "../images/1.jpg"
 import downImage from "../images/downImageSmall.jpg"
-import Tooltip from "../hooks/Tooltip";
-import {match} from "ramda";
 const curry = require('ramda').curry
 
 const styles= {
@@ -146,28 +144,28 @@ const fabData = [
         id: 9,
         name: "Garden",
         by: "Jordan",
-        image: "https://images.unsplash.com/photo-1427392797425-39090deb14ec?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=900&h=900&fit=crop&s=8bfe49466d0da200e61128a8ab0e8fbe",
+        image: "https://images.theconversation.com/files/365975/original/file-20201028-15-xtazrw.jpg?ixlib=rb-1.1.0&q=45&auto=format&w=1200&h=1200.0&fit=crop",
         mainAttack: "parasitic",
         specialAttack: "poison"
     }, {
         id: 9,
         name: "Garden",
         by: "Jordan",
-        image: "https://images.unsplash.com/photo-1427392797425-39090deb14ec?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=900&h=900&fit=crop&s=8bfe49466d0da200e61128a8ab0e8fbe",
+        image: "https://images.theconversation.com/files/365975/original/file-20201028-15-xtazrw.jpg?ixlib=rb-1.1.0&q=45&auto=format&w=1200&h=1200.0&fit=crop",
         mainAttack: "parasitic",
         specialAttack: "poison"
     },{
         id: 10,
         name: "Garden",
         by: "Jordan",
-        image: "https://images.unsplash.com/photo-1427392797425-39090deb14ec?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=900&h=900&fit=crop&s=8bfe49466d0da200e61128a8ab0e8fbe",
+        image: "https://bloody-disgusting.com/wp-content/uploads/2020/08/where-sea-monsters-roam-steve-alten.png",
         mainAttack: "parasitic",
         specialAttack: "poison"
     }, {
         id: 10,
         name: "Garden",
         by: "Jordan",
-        image: "https://images.unsplash.com/photo-1427392797425-39090deb14ec?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=900&h=900&fit=crop&s=8bfe49466d0da200e61128a8ab0e8fbe",
+        image: "https://bloody-disgusting.com/wp-content/uploads/2020/08/where-sea-monsters-roam-steve-alten.png",
         mainAttack: "parasitic",
         specialAttack: "poison"
     },{
@@ -190,20 +188,18 @@ const fabData = [
         id: 12,
         name: "Garden",
         by: "Jordan",
-        image: "https://images.unsplash.com/photo-1427392797425-39090deb14ec?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=900&h=900&fit=crop&s=8bfe49466d0da200e61128a8ab0e8fbe",
+        image: "https://i.guim.co.uk/img/media/dc98d14d8acc9f965c8c163ac6db1856335cd451/130_0_2022_1213/master/2022.jpg?width=700&quality=85&auto=format&fit=max&s=92418c4f52fc71e42b6982f857891f85",
         mainAttack: "parasitic",
         specialAttack: "poison"
     },{
         id: 12,
         name: "Garden",
         by: "Jordan",
-        image: "https://images.unsplash.com/photo-1427392797425-39090deb14ec?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=900&h=900&fit=crop&s=8bfe49466d0da200e61128a8ab0e8fbe",
+        image: "https://i.guim.co.uk/img/media/dc98d14d8acc9f965c8c163ac6db1856335cd451/130_0_2022_1213/master/2022.jpg?width=700&quality=85&auto=format&fit=max&s=92418c4f52fc71e42b6982f857891f85",
         mainAttack: "parasitic",
         specialAttack: "poison"
     }];
-// const downImage ="https://i.redd.it/6esxupxwcf1z.jpg";
 
-//
 let firstCard,secondCard
 
 function Card2 ({card,tileStyle, flippedStatus, onClick}){
@@ -220,34 +216,31 @@ function Card2 ({card,tileStyle, flippedStatus, onClick}){
     );
 }
 
-function cardReducer(state,action){
-    if (action.type==='first'){
-        return{
-            ...state,
-            firstCard:action.thisId
-        }
-    } else if (action.type==='second'){
-        return{
-            ...state,
-            secondCard: action.thisId
-        }
+let f //yes, let f
 
-    } else if (action.type==='reset'){
-        return {
-            firstCard: null,
-            secondCard: null
-        }
-    } else {
-        throw new Error ('cardReducer error')
+function shuffle(array) {
+    var m = array.length, t, i;
+
+    // While there remain elements to shuffle…
+    while (m) {
+
+        // Pick a remaining element…
+        i = Math.floor(Math.random() * m--);
+
+        // And swap it with the current element.
+        t = array[m];
+        array[m] = array[i];
+        array[i] = t;
     }
-}
-let f,newFlipped3
 
-function Board (){
+    return array;
+}
+
+function Board ({cards}){
     const [flippedArray, setFlippedArray] = React.useState(Array(24).fill(false))
     const [matchedArray, setMatchedArray] = React.useState(Array(24).fill(false))
-    const [clickCount, setClickCount] = React.useState(0)
-    const [flippedCount, setFlippedCount] = React.useState(0)
+    const [flippedCount, setFlippedCount] = React.useState(0) // for determining score?
+
     // const {transform, opacity} = useSpring({
     //     opacity: flipped ? 1 : 0,
     //     transform: `perspective(600px) rotateX(${flipped ? 180 : 0}deg)`,
@@ -266,16 +259,16 @@ function Board (){
         }
     }
 
-    const curriedCheckMatch=curry(checkMatch)
-    console.log(matchedArray)
+    const curriedCheckMatch=curry(checkMatch) // oh hey look at that!
 
     function flipCardsDown(i1,i2){
+        // needs to be behind a time delay otherwise it happens so quickly the second card doesn't appear to flip at all
         setTimeout(() => {
             const newFlipped2 = [...flippedArray]
             newFlipped2[i1] = false
             newFlipped2[i2] = false
             setFlippedArray(newFlipped2)
-        }, 1000)
+        }, 1500)
 
     }
 
@@ -287,47 +280,29 @@ function Board (){
         return newFlipped
     }
 
-
-
-
     const handleFlip=(i)=>{
         // check to see if the card is already matched
         // if matched, then do nothing. No clicky clicky.
         // if not currently matched, then perform clicky clicky.
-
-
         if (matchedArray[i] ===false) {
             setFlippedCount(flippedCount+1)
 
-
             let newFlipped = flipCardUp(i)
-
-
 
             // if it's the first turn
             if (newFlipped.filter(x=>x).length %2!=0){
-                // console.log('first')
-                // firstCard=i
-                f=curriedCheckMatch(i,fabData[i].id)
-                // console.log(f)
+                f=curriedCheckMatch(i,cards[i].id)
 
             } else if (newFlipped.filter(x=>x).length %2===0){
-                // console.log('second')
-                // secondCard=i
-                f(i,fabData[i].id)
+                f(i,cards[i].id)
             }
-            // turn Reducer
-            // dispatch({type:'flipACard',thisId:[i]})
-
-            // setFlippedArray(newFlipped3)
-
         }
     }
 
 
     return(
         <div className="board" style={styles.board}>
-                {fabData.map((data, index)=> {
+                {cards.map((data, index)=> {
                     return <Card2
                         // id = card.id
                         card={data}
@@ -345,54 +320,19 @@ function Board (){
 }
 
 export default function Game(){
+
+    // const gameCards = useContext(DataContext)
+    const gameCards = fabData
     return (
         <div className="game" >
             <h1 className="header-md center-text">
                 Memory Game
             </h1>
             <div className={"game-board"} >
-                    <Board/>
+                    <Board
+                        cards={shuffle(gameCards)}/>
             </div>
 
         </div>
     );
-
-}
-
-function turnReducer(state,action){
-    if (action.type==='flipACard' && state.firstCard===null ){
-        console.log('flipped1',action.thisId)
-        return {
-            ...state,
-            turnStatus: 'second',
-            firstCard: action.thisId,
-            thisId: null
-        }
-    } else if (action.type==='flipACard' && state.secondCard ===null) {
-        console.log('flipped2',action.thisId)
-        return{
-            ...state,
-            turnStatus: 'first',
-            secondCard: state.thisId,
-            thisId:null
-        }
-    } else if (action.type ==='reset'){
-        return{
-            turnStatus: 'first',
-            firstCard: null,
-            secondCard: null,
-            thisId:null,
-            match: false
-        }
-    } else if (action.type==='checkMatch') {
-        if (state.firstCard ===state.secondCard){
-            // update matchedArray
-            return{
-                ...state,
-                match: true
-            }
-        }
-    } else {
-        throw new Error('turnReducer error')
-    }
 }

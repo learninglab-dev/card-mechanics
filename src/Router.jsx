@@ -27,14 +27,14 @@ export default function AppRouter() {
               <Gallery/>
             </Route>
             <Route path='/game'>
-              <GamePage/>
+              <GamePage2/>
             </Route>
             <Route path='/about'>
               <About/>
             </Route>
-            <Route path='/cardflip'>
-              <GamePage2/>
-            </Route>
+            {/*<Route path='/cardflip'>*/}
+            {/*  <GamePage2/>*/}
+            {/*</Route>*/}
           </Switch>
       </DataProvider>
     </Router>

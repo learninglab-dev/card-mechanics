@@ -39,7 +39,7 @@ export default function Nav(){
                         About
                     </NavLink>
                 </li>
-                <li>
+{/*                <li>
                     <NavLink
                         to={'/cardflip'}
                         exact
@@ -56,7 +56,7 @@ export default function Nav(){
                         className = 'nav-link'>
                         Monsters
                     </NavLink>
-                </li>
+                </li>*/}
             </ul>
         </nav>
 
