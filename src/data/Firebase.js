@@ -4,6 +4,7 @@ import {
   createContext
 } from 'react'
 import firebase from 'firebase'
+import 'firebase/storage'
 import firebaseConfig from './firebase.config'
 import AppRouter from '../Router'
 import GetCards from "./GetCards";

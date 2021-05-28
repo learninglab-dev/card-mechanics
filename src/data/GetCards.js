@@ -6,6 +6,7 @@ import React, {
   createContext
 } from 'react'
 import firebase from 'firebase'
+import 'firebase/storage'
 import {
   useParams,
   Link,
@@ -25,6 +26,7 @@ export default function GetCards() {
   const ready = useContext(Ready)
   const [cards, setCards] = useState(null)
   const deck = 'monsters' //useParams()
+  // const storage = firebase.storage()
   // const history = useHistory()
   // const playing = useRouteMatch('/monsters/memorygame')?.isExact
 
