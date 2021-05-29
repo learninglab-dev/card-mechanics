@@ -39,15 +39,15 @@ export default function Nav(){
                         About
                     </NavLink>
                 </li>
-                <li>
-                    <NavLink
-                        to={'/cardflip'}
-                        exact
-                        activeStyle = {activeStyle}
-                        className = 'nav-link'>
-                        Testing
-                    </NavLink>
-                </li>
+                {/*<li>*/}
+                {/*    <NavLink*/}
+                {/*        to={'/cardflip'}*/}
+                {/*        exact*/}
+                {/*        activeStyle = {activeStyle}*/}
+                {/*        className = 'nav-link'>*/}
+                {/*        Testing*/}
+                {/*    </NavLink>*/}
+                {/*</li>*/}
                 {/*<li>*/}
                 {/*    <NavLink*/}
                 {/*        to={'/monsters'}*/}
