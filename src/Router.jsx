@@ -11,7 +11,7 @@ import Nav from './views/Nav'
 import About from "./views/About";
 import Gallery from "./views/Gallery";
 import DataProvider from "./contexts/DataContext";
-import CardFlip from './views/CardFlip'
+import CardFlip from './views/SandBox'
 import LaunchGame from "./views/LaunchGame";
 
 export default function AppRouter() {

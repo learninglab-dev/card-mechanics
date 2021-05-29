@@ -3,7 +3,7 @@ import Tooltip from '../hooks/Tooltip'
 
 const downImage ="https://i.redd.it/6esxupxwcf1z.jpg"
 
-export default function Card ({data, style,bool, flipped}){
+export default function Card ({data, style,bool,flipped}){
     let tileStyle = style;
     // let image be up or down
     //

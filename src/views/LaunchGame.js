@@ -26,13 +26,13 @@ export default function LaunchGame(){
           <div className={"center-text"}>
             {diffLevel === null ? (
                 < >
-                  <button className={"btn"} onClick={() => setDiffLevel(6)}>Easy</button>
-                  <button className={"btn"} onClick={() => setDiffLevel(9)}>Medium</button>
-                  <button className={"btn"} onClick={() => setDiffLevel(12)}>Hard</button>
+                  <button className={"button"} onClick={() => setDiffLevel(6)}>Easy</button>
+                  <button className={"button"} onClick={() => setDiffLevel(9)}>Medium</button>
+                  <button className={"button"} onClick={() => setDiffLevel(12)}>Hard</button>
                 </>
             ) : (
                 <>
-                    <button className={"btn"}
+                    <button className={"button"}
                             onClick={() =>
                                 setTimeout(() => {
                                     setDiffLevel(null)
