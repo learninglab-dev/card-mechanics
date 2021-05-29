@@ -1,7 +1,7 @@
 import React from "react";
 import Card from "./Card";
 import '../style.css'
-import Game from './GamePage2'
+import Game from './Board'
 
 
 
