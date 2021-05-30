@@ -3,6 +3,7 @@ import {DataContext} from "../data/GetCards";
 import '../style.css'
 import Board from './Board'
 import image1 from "../images/1.jpg"
+import useShuffle from "../hooks/useShuffle";
 
 
 const fabData = [
@@ -93,6 +94,7 @@ const fabData = [
         specialAttack: "poison"
     }];
 
+// TODO Refactor into useShuffle hook so it can be used for gallery too
 // shamelessly stolen shuffle function: https://bost.ocks.org/mike/shuffle/
 function shuffle(array) {
     var m = array.length, t, i;
@@ -114,13 +116,14 @@ function shuffle(array) {
 
 function generateGameDeck(gameCards,numCards){
 
-    let selectedCards = shuffle(gameCards).slice(0,numCards) // randomly shuffle and select subset
+    // const shuffledCards= useShuffle(gameCards)
+    let shuffledCards=shuffle(gameCards)
+    //
+    let selectedCards = shuffledCards.slice(0,numCards) // randomly shuffle and select subset
     let duplicatedCards = [...selectedCards] //duplicate
 
-    console.log(selectedCards,duplicatedCards)
     let readyDeck = shuffle(selectedCards.concat(duplicatedCards)) // one more shuffle to randomize placement
 
-    console.log(readyDeck)
     return readyDeck
 }
 

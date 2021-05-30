@@ -138,11 +138,16 @@ export default function Gallery(){
     return (
         <div className="container" style={styles.gridContainer}>
             {data.map((data, index) => {
-                return <Card
-                    data={data}
-                    style={styles.card}
-                    bool={true}
-                />
+
+                return (
+                    <li key={index}>
+                            <Card
+                        data={data}
+                        style={styles.card}
+                        bool={true}
+                    />
+                </li>
+                )
             })}
         </div>
     );

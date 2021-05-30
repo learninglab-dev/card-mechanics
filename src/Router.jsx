@@ -33,9 +33,6 @@ export default function AppRouter() {
             <Route path='/about'>
               <About/>
             </Route>
-            <Route path='/cardflip'>
-              <CardFlip/>
-            </Route>
           </Switch>
       </DataProvider>
     </Router>

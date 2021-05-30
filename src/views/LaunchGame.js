@@ -23,7 +23,7 @@ export default function LaunchGame(){
               <h2 >Choose a difficulty to begin!</h2>
           )}
         <div className="container">
-          <div className={"center-text"}>
+          <div className={"center-text space-between"}>
             {diffLevel === null ? (
                 < >
                   <button className={"button"} onClick={() => setDiffLevel(6)}>Easy</button>
