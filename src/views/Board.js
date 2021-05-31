@@ -9,7 +9,7 @@ const curry = require('ramda').curry
 const styles= {
     board: {
         display: "grid",
-        gridTemplateColumns: "repeat(6, minmax(5vh, 15vh) )",
+        gridTemplateColumns: "repeat(6, minmax(15vh, 15vh) )",
         gridAutoRows: "auto",
         alignItems: "stretch",
         gridGap: "5px 5px",
@@ -27,22 +27,6 @@ const styles= {
 }
 
 let f //yes, let f
-
-// TODO: need to refactor this back into the original Card Component
-function Card2 ({card,tileStyle, flippedStatus, onClick}){
-
-    let showImage = flippedStatus === true ? card.image : downImage
-    return (
-        <div className="card" style={tileStyle}>
-            <img
-                src={showImage}
-                style={tileStyle}
-                onClick ={onClick}
-            />
-        </div>
-    );
-}
-
 
 export default function Board ({cards,gameState,setGameState}){
 
@@ -137,13 +121,14 @@ export default function Board ({cards,gameState,setGameState}){
                 {cards.map((data, index)=> {
                     return (
                         <li key={index}>
-                            <Card2
+                            <Card
                                 // id = card.id
-                                card={data}
-                                tileStyle={styles.card}
+                                data={data}
+                                style={styles.card}
+                                bool={false}
                                 flippedStatus={flippedArray[index]}
-                                disabled={buttonDisabled}
                                 onClick={()=>handleFlip(index)}
+                                disabled={buttonDisabled}
                             />
                         </li>
                     )
