@@ -4,6 +4,7 @@ import {DataContext} from "../data/GetCards";
 import React, {useContext} from 'react'
 import image1 from "../images/1.jpg"
 
+
 const fabData = [
     {
         id: 1,
@@ -12,7 +13,7 @@ const fabData = [
         image: "https://images.unsplash.com/photo-1442530792250-81629236fe54?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=980&h=980&fit=crop&s=9631adb2d2f752e3a0734f393fef634b",
         mainAttack: "tentacles",
         specialAttack: "mind reading",
-        mythos: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non sodales dolor. Vivamus vitae tristique augue. In hac habitasse platea dictumst. Nullam lobortis, dolor nec venenatis viverra, massa nibh tincidunt diam, eu convallis magna ante a libero. Vestibulum posuere maximus erat nec tempus. Suspendisse potenti. Nam sollicitudin nisl massa, nec molestie ligula dapibus quis. Pellentesque mollis auctor augue eu porta. Donec luctus bibendum eros, eu pharetra urna pharetra ut. Duis sed erat eget urna tempus finibus ut at tellus."
+        mythos: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non sodales dolor. Vivamus vitae tristique augue. In hac habitasse platea dictumst. Nullam lobortis, dolor nec venenatis viverra, massa nibh tincidunt diam, eu convallis magna ante a libero. Vestibulum posuere maximus erat nec tempus. Suspendisse potenti. Nam sollicitudin nisl massa, nec molestie ligula dapibus quis. Pellentesque mollis auctor augue eu porta. Donec luctus bibendum eros, eu pharetra urna pharetra ut. Duis sed erat eget urna tempus finibus ut at tellus. \n Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non sodales dolor. Vivamus vitae tristique augue. In hac habitasse platea dictumst. Nullam lobortis, dolor nec venenatis viverra, massa nibh tincidunt diam, eu convallis magna ante a libero. Vestibulum posuere maximus erat nec tempus. Suspendisse potenti. Nam sollicitudin nisl massa, nec molestie ligula dapibus quis. Pellentesque mollis auctor augue eu porta. Donec luctus bibendum eros, eu pharetra urna pharetra ut. Duis sed erat eget urna tempus finibus ut at tellus. \n Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non sodales dolor. Vivamus vitae tristique augue. In hac habitasse platea dictumst. Nullam lobortis, dolor nec venenatis viverra, massa nibh tincidunt diam, eu convallis magna ante a libero. Vestibulum posuere maximus erat nec tempus. Suspendisse potenti. Nam sollicitudin nisl massa, nec molestie ligula dapibus quis. Pellentesque mollis auctor augue eu porta. Donec luctus bibendum eros, eu pharetra urna pharetra ut. Duis sed erat eget urna tempus finibus ut at tellus."
     },{
         id: 2,
         name: "Forest",

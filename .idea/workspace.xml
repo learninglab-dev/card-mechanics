@@ -2,18 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ade28a09-abae-4d48-80c4-d0e4c0c46d45" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/hooks/Toggle.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/hooks/useShuffle.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Router.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Router.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/About.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/About.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/Board.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/Board.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/Card.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/Card.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/views/Gallery.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/Gallery.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/GamePage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/GamePage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/LaunchGame.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/LaunchGame.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,7 +61,7 @@
       <workItem from="1622031946796" duration="17329000" />
       <workItem from="1622122430934" duration="595000" />
       <workItem from="1622139948310" duration="39554000" />
-      <workItem from="1622398984510" duration="5061000" />
+      <workItem from="1622398984510" duration="9184000" />
     </task>
     <servers />
   </component>

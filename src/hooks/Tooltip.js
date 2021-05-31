@@ -59,7 +59,7 @@ export default function Tooltip ({text,children}) {
                 </div>
             }
 
-            {children}
+            {children}cd
         </div>
 
     )
