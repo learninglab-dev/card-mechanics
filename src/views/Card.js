@@ -1,8 +1,6 @@
 import React from 'react'
 import Tooltip from '../hooks/Tooltip'
 import {Modal,Button} from 'react-bootstrap'
-import ModalImage from 'react-modal-image'
-import Lightbox from "react-image-lightbox";
 import downImage from "../images/downImageSmall.jpg"
 
 const styles={

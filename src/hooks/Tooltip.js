@@ -39,7 +39,7 @@ const styles = {
     tile: {
         margin: "15px",
         cursor: "pointer",
-        overflow: "hidden",
+        // overflow: "hidden",
     }
 
 }

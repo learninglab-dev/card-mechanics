@@ -1,8 +1,7 @@
 
-html, body, #app {
+html, body, #app, {
     height: 100%;
     width: 100%;
-    padding: 1vh;
 }
 
 .container{
@@ -12,7 +11,9 @@ html, body, #app {
 
 li {
     list-style-type: none;
+
 }
+
 
 /*.modal-90w{*/
 /*    !*width: 100%;*!*/
@@ -33,9 +34,24 @@ li {
     transition: all 0.2s;
 }
 
+.highlightText{
+    color: #065280;
+}
 
+.bmargin-2{
+    margin-bottom: 2vw;
+}
 
 .center-text {
+    text-align: center;
+}
+
+.infoPane{
+    background-color: #053b5c;
+    margin: none;
+    color: #FFFFFF;
+    font-family: "Lato", sans-serif;
+    text-transform: uppercase;
     text-align: center;
 }
 
@@ -44,6 +60,14 @@ li {
     font-size:35pt;
     text-transform: uppercase;
 
+}
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    padding: 2pt;
 }
 
 .header-lg {
@@ -95,12 +119,13 @@ li {
 }
 
 .space-between {
-    justify-content: space-between;
+    /*justify-content: space-between;*/
 }
 
 .row {
     display: flex;
     flex-direction: row;
+    width: 99%;
 }
 
 .nav-link {
@@ -111,9 +136,10 @@ li {
 }
 
 .nav li {
-    padding: 25pt 10pt 10pt 10pt;
+    padding-top: 25pt;
     list-style-type: none;
     justify-content: right;
+    /*padding-right: 5pt;*/
 }
 
 .menu-right {

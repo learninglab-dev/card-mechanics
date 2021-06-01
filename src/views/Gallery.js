@@ -133,7 +133,7 @@ const fabData = [
 const styles={
     gridContainer:{
         display: "grid",
-        gridTemplateColumns: "repeat(auto-fit, minmax(400px, 1fr))",
+        gridTemplateColumns: "repeat(auto-fit, minmax(350px, 1fr))",
         gridGap: "10px 10px",
         justifyItems: "stretch",
         justifyContent: 'space-evenly',

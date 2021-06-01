@@ -3,7 +3,6 @@ import Card from './Card'
 import {DataContext} from "../data/GetCards";
 import '../style.css'
 
-import downImage from "../images/downImageSmall.jpg"
 const curry = require('ramda').curry
 
 const styles= {
