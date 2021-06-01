@@ -8,6 +8,30 @@ html, body, #app {
     width: 80vw;
     height: auto
 }
+.component {
+    height: 100%;
+    /*top: 10vh;*/
+    width: 100%;
+    /*display: flex;*/
+}
+
+.component.first-component {
+    /*background-color: gray;*/
+    /*position: relative;*/
+}
+
+.first-component--inside-scroller {
+    position: absolute;
+    /*right: 20px;*/
+    top: 100px;
+}
+
+.second-component{
+    /*margin-top: 10vh;*/
+    background-color: #053b5c;
+}
+
+
 
 li {
     list-style-type: none;
@@ -48,8 +72,10 @@ li {
     color: #065280;
 }
 
-.bmargin-2{
-    margin-bottom: 2vw;
+.center-grid{
+    display: grid;
+    justify-content: center;
+    align-content: center;
 }
 
 
@@ -58,11 +84,13 @@ li {
 }
 
 .infoPane{
-    background-color: #053b5c;
+
     color: #FFFFFF;
     font-family: "Lato", sans-serif;
     text-transform: uppercase;
     text-align: center;
+    margin-top: 20vh;
+    border: 2pt solid white;
 }
 
 .header-class{
@@ -142,6 +170,11 @@ li {
 .nav-main{
     border-bottom: 2pt solid #1a1a1a;
     width: 100%;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    background: #FFFFFF;
+
     /*width: 100vw;*/
     /*padding-right: 1vw;*/
 }

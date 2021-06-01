@@ -9,6 +9,7 @@ import GamePage from './views/GamePage'
 import GetCards from './data/GetCards'
 import Nav from './views/Nav'
 import About from "./views/About";
+import AboutPage from "./views/AboutPage";
 import Gallery from "./views/Gallery";
 import DataProvider from "./contexts/DataContext";
 import CardFlip from './views/SandBox'
@@ -31,7 +32,7 @@ export default function AppRouter() {
               <LaunchGame/>
             </Route>
             <Route path='/about'>
-              <About/>
+              <AboutPage/>
             </Route>
           </Switch>
       </DataProvider>

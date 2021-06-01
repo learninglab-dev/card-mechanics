@@ -82,6 +82,6 @@ export default function About(){
             </Container>
             {/*<h1 className={'header-md center-text'}>About HUMA-E103 Sea Monsters</h1>*/}
 
-            </div>
+        </div>
     )
 }
