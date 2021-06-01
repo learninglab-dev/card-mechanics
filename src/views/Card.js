@@ -1,16 +1,17 @@
 import React from 'react'
 import Tooltip from '../hooks/Tooltip'
-import {Modal,Button} from 'react-bootstrap'
+import {Modal,Button,Container,Row,Col} from 'react-bootstrap'
 import downImage from "../images/downImageSmall.jpg"
 
 const styles={
     image:{
         objectFit: "cover",
+        // width: "50vw",
         width: "50vw",
+        height: "80vh",
         marginLeft: "auto",
         marginRight: "auto",
-        display: "block",
-        marginBottom: "10pt"
+        display: "block"
     }}
 
 
@@ -41,15 +42,15 @@ export default function Card ({data, style,bool,flippedStatus,onClick}){
                     />
                 </Tooltip>
                 <Modal
-                    size="xl"
+                    // size="xl"
                     aria-labelledby="contained-modal-title-vcenter"
-                    // className="modal-90w"
-                    // aria-labelledby="example-custom-modal-styling-title"
+                    dialogClassName="modal-90w"
+                    aria-labelledby="example-custom-modal-styling-title"
                     centered
                     scrollable
                     show={show}
                     onHide={handleClose}
-                    contentClassName={'foo-modal-backdrop'}
+                    // contentClassName={'foo-modal-backdrop'}
                 >
                     {/*<Modal.Header  closeButton>*/}
                     {/*    /!*<Modal.Title>*!/*/}
@@ -60,18 +61,39 @@ export default function Card ({data, style,bool,flippedStatus,onClick}){
                     {/*    /!*</Modal.Title>*!/*/}
                     {/*</Modal.Header>*/}
                     <Modal.Body>
-                        <img
-                            src={data.image}
-                            alt={data.name}
-                            style={styles.image}
-                        />
-                        {data.mythos}
+                        <Container fluid>
+                            <Row>
+                                <Col md={7}>
+                                    <Row>
+                                        <img
+                                            src={data.image}
+                                            alt={data.name}
+                                            style={styles.image}
+                                        />
+                                    </Row>
+                                </Col>
+                                <Col md={5}>
+                                    <Row>
+                                        <Modal.Title>
+                                            <h2>{data.name}</h2>
+                                            <h4>created by {data.by}, {data.year}</h4>
+                                        </Modal.Title>
+                                    </Row>
+                                    <Row className={"monster-mythos"}>
+                                        {data.mythos}
+                                    </Row>
+
+                                </Col>
+                            </Row>
+
+                        </Container>
+                        {/*<Modal.Footer>*/}
+                        {/*    <Button variant="secondary" onClick={handleClose}>*/}
+                        {/*        Close*/}
+                        {/*    </Button>*/}
+                        {/*</Modal.Footer>*/}
                     </Modal.Body>
-                    <Modal.Footer>
-                        <Button variant="secondary" onClick={handleClose}>
-                            Close
-                        </Button>
-                    </Modal.Footer>
+
                 </Modal>
 
 

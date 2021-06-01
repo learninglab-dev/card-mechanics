@@ -22,7 +22,7 @@ export default function AppRouter() {
     <Router>
       <DataProvider>
         <Nav/>
-        <hr/>
+        {/*<hr/>*/}
           <Switch>
             <Route exact path='/'>
               <Gallery/>

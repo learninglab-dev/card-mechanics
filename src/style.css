@@ -1,5 +1,5 @@
 
-html, body, #app, {
+html, body, #app {
     height: 100%;
     width: 100%;
 }
@@ -15,9 +15,19 @@ li {
 }
 
 
-/*.modal-90w{*/
-/*    !*width: 100%;*!*/
-/*}*/
+.modal-90w{
+    width: 90vw;
+    max-width: 90vw!important;
+}
+
+.dark-background{
+    background-color: #2f2f2f;
+    color: white;
+}
+
+.monster-mythos{
+    margin-top: 5vh;
+}
 
 .button {
     display:inline-block;
@@ -42,13 +52,13 @@ li {
     margin-bottom: 2vw;
 }
 
+
 .center-text {
     text-align: center;
 }
 
 .infoPane{
     background-color: #053b5c;
-    margin: none;
     color: #FFFFFF;
     font-family: "Lato", sans-serif;
     text-transform: uppercase;
@@ -122,12 +132,19 @@ li {
     /*justify-content: space-between;*/
 }
 
-.row {
+.myrow {
     display: flex;
     flex-direction: row;
-    width: 99%;
-}
 
+    /*padding-right: 1vw;*/
+    /*width: auto;*/
+}
+.nav-main{
+    border-bottom: 2pt solid #1a1a1a;
+    width: 100%;
+    /*width: 100vw;*/
+    /*padding-right: 1vw;*/
+}
 .nav-link {
     font-size: 18px;
     font-weight: bold;
@@ -139,13 +156,13 @@ li {
     padding-top: 25pt;
     list-style-type: none;
     justify-content: right;
-    /*padding-right: 5pt;*/
+    padding-left: -5pt;
 }
 
 .menu-right {
     float: right;
+    margin-right: 0;
 }
-
 
 
 .space-between {

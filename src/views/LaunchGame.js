@@ -25,11 +25,11 @@ export default function LaunchGame(){
         <div className="container">
           <div className={"center-text space-between"}>
             {diffLevel === null ? (
-                < >
+                <React.Fragment className={"space-between"} >
                   <button className={"button"} onClick={() => setDiffLevel(6)}>Easy</button>
                   <button className={"button"} onClick={() => setDiffLevel(9)}>Medium</button>
                   <button className={"button"} onClick={() => setDiffLevel(12)}>Hard</button>
-                </>
+                </React.Fragment>
             ) : (
                 <>
                     <button className={"button"}

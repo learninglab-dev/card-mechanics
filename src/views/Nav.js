@@ -9,9 +9,9 @@ const activeStyle = {
 export default function Nav(){
     return (
 
-        <nav className = 'row space-between'>
+        <nav className = 'nav-main myrow space-between'>
             <h1 className={'header-lg justify-content-left'}> Sea Monsters </h1>
-            <ul className = 'nav justify-content-right '>
+            <ul className = 'nav'>
                 <li>
                     <NavLink
                         to={'/'}
@@ -58,6 +58,7 @@ export default function Nav(){
                 {/*    </NavLink>*/}
                 {/*</li>*/}
             </ul>
+
         </nav>
 
     )

@@ -1,9 +1,7 @@
-import React from 'react'
-import '../style.css'
-import {Container, Row, Col,Media} from 'react-bootstrap'
-import mainImage from '../images/4.jpg'
+import React from "react";
+import {Col, Container, Media, Row} from "react-bootstrap";
+import mainImage from "../images/4.jpg";
 import pg from '../images/PGirguis.jpg'
-import ReactPageScroller from "react-page-scroller";
 
 const styles={
     container:{
@@ -16,19 +14,17 @@ const styles={
         objectFit:"cover",
         objectPosition:"0% 50%",
         // marginLeft: "auto",
-        marginRight: "auto",
+        // marginRight: "auto",
         display: "block",
-        marginBottom: "2vw",
-        // width: "100%",
-        // paddingRight: "1vw"
+        marginBottom: "2vw"
 
 
     }
 }
 
-export default function About(){
+export default () => {
     return (
-        <div>
+        <div className={"component"}>
             <Media>
                 <img
                     width={"100%"}
@@ -50,38 +46,7 @@ export default function About(){
 
                     </Col>
                 </Row>
-                <Row className={"justify-content-center bmargin-2"}>
-                    <Col md={5} className={"justify-content-center infoPane"}>
-                        <Row className={"justify-content-center "}>
-                            <h2> Instructor Info</h2>
-                        </Row>
-                        <Row>
-                                <img
-                                    className={"center"}
-                                    src={pg}
-                                    alt={"Illustrated headshot of Dr. Peter Girguis"}
-                                    />
-                        </Row>
-                        <Row>
-                            <h4><a className={'justify-content-center'} href={"https://online-learning.harvard.edu/course/sea-monsters-throughout-ages-fables-films-and-facts?delta=0"}>Peter Girguis</a></h4>
-                            <p> Professor of Organismic and Evolutionary Biology, Harvard University </p>
-                        </Row>
-                    </Col>
-                    <Col sm={1}>
-
-                    </Col>
-                    <Col md={5} className={"justify-content-center infoPane"}>
-                        <Row>
-                            <h2 > Course Info</h2>
-                        </Row>
-                        <Row>
-                            <p> Links</p>
-                        </Row>
-                    </Col>
-                </Row>
             </Container>
-            {/*<h1 className={'header-md center-text'}>About HUMA-E103 Sea Monsters</h1>*/}
-
-            </div>
-    )
-}
+        </div>
+    );
+};
