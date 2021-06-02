@@ -1,21 +1,11 @@
 import React from "react";
 import { Pagination } from "react-bootstrap";
 import ReactPageScroller from 'react-page-scroller'
-
-// import ReactPageScroller from "../../src";
 import FirstComponent from "./CourseAbout";
 import SecondComponent from "./CourseInfo";
-// import ThirdComponent from "./ThirdComponent";
-// import FourthComponent from "./FourthComponent";
-// import FifthComponent from "./FifthComponent";
-
 import "../style.css";
 
 export default function FullPage() {
-    // constructor(props) {
-    //     super(props);
-    //     this.state = { currentPage: null };
-    // }
 
     const [currentPage,setCurrentPage] = React.useState(null)
 
@@ -41,23 +31,17 @@ export default function FullPage() {
         return [...pageNumbers];
     };
 
-    render() {
-        const pagesNumbers = getPagesNumbers();
 
-        return (
-            <React.Fragment>
-                <ReactPageScroller
-                    pageOnChange={handlePageChange}
-                    onBeforePageScroll={handleBeforePageChange}
-                    customPageNumber={currentPage}
-                >
-                    <FirstComponent />
-                    <SecondComponent />
-                </ReactPageScroller>
-                {/*<Pagination className="pagination-additional-class" bsSize="large">*/}
-                {/*    {pagesNumbers}*/}
-                {/*</Pagination>*/}
-            </React.Fragment>
-        );
-    }
+    return (
+        <React.Fragment>
+            <ReactPageScroller
+                pageOnChange={handlePageChange}
+                onBeforePageScroll={handleBeforePageChange}
+                customPageNumber={currentPage}
+            >
+                <FirstComponent />
+                <SecondComponent />
+            </ReactPageScroller>
+        </React.Fragment>
+    );
 }

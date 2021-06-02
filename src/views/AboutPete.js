@@ -27,7 +27,7 @@ export default () => {
                         </Row>
                         <Row>
                             {/*<h4><a className={'center-text'} href={"https://online-learning.harvard.edu/course/sea-monsters-throughout-ages-fables-films-and-facts?delta=0"}>Peter Girguis</a></h4>*/}
-                            <p className={"center"}> <a href={"https://girguislab.oeb.harvard.edu/people/peter-girguis"} alt={"Link to Pete Girguis' homepage"}>Dr. Peter Girguis</a> is a Professor of Organismic and Evolutionary Biology, Harvard University, where he runs a lab researching most-things deep-sea-related. He has taught Sea Monsters through Harvard University Extension School and as a freshman colloqium through Harvard College.  </p>
+                            <p className={"center"}> <a href={"https://girguislab.oeb.harvard.edu/people/peter-girguis"} alt={"Link to Pete Girguis' homepage"}>Dr. Peter Girguis</a> is a Professor of Organismic and Evolutionary Biology, Harvard University, where he runs a lab researching most-things deep-sea-related. He has taught Sea Monsters through Harvard University Extension School and as a freshman colloquium through Harvard College.  </p>
                         </Row>
                     </Col>
                     {/*<Col sm={1}>*/}
