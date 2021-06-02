@@ -4,7 +4,7 @@ import {Modal,Button,Container,Row,Col} from 'react-bootstrap'
 import downImage from "../images/downImageSmall.jpg"
 
 const styles={
-    image:{
+    modal_image:{
         objectFit: "cover",
         // width: "50vw",
         width: "50vw",
@@ -68,7 +68,7 @@ export default function Card ({data, style,bool,flippedStatus,onClick}){
                                         <img
                                             src={data.image}
                                             alt={data.name}
-                                            style={styles.image}
+                                            style={styles.modal_image}
                                         />
                                     </Row>
                                 </Col>

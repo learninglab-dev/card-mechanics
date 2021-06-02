@@ -2,8 +2,8 @@ import React from "react";
 import { Pagination } from "react-bootstrap";
 
 import ReactPageScroller from "react-page-scroller";
-import FirstComponent from "./FirstComponent";
-import SecondComponent from "./SecondComponent";
+import AboutCourse from "./AboutCourse";
+import AboutPete from "./AboutPete";
 
 
 import "../style.css";
@@ -46,11 +46,9 @@ export default class AboutPage extends React.Component {
                     onBeforePageScroll={this.handleBeforePageChange}
                     customPageNumber={this.state.currentPage}
                 >
-                    <FirstComponent />
-                    <SecondComponent />
-                    {/*<ThirdComponent />*/}
-                    {/*<FourthComponent />*/}
-                    {/*<FifthComponent />*/}
+                    <AboutCourse />
+                    <AboutPete />
+
                 </ReactPageScroller>
                 {/*<Pagination className="pagination-additional-class" bsSize="large">*/}
                 {/*    {pagesNumbers}*/}

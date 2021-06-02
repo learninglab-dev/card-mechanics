@@ -143,6 +143,9 @@ const styles={
     card: {
         cursor: "pointer",
         overflow: "hidden",
+        alignContent: "center",
+
+
     }
 }
 
