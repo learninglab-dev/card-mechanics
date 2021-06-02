@@ -116,13 +116,9 @@ function shuffle(array) {
 
 function generateGameDeck(gameCards,numCards){
 
-    // const shuffledCards= useShuffle(gameCards)
-    let shuffledCards=shuffle(gameCards)
-    //
-    let selectedCards = shuffledCards.slice(0,numCards) // randomly shuffle and select subset
+    let selectedCards = gameCards.slice(0,numCards) // randomly shuffle and select subset
     let duplicatedCards = [...selectedCards] //duplicate
-
-    let readyDeck = shuffle(selectedCards.concat(duplicatedCards)) // one more shuffle to randomize placement
+    let readyDeck = selectedCards.concat(duplicatedCards) // one more shuffle to randomize placement
 
     return readyDeck
 }
@@ -133,7 +129,8 @@ export default function Game({diffLevel, gameState,setGameState}){
     const gameCards = fabData
     // const gameCards = useContext(DataContext)
 
-    let gameCardsReady = generateGameDeck(gameCards,diffLevel)
+    // shuffle which cards are chosen, and then shuffle the order of the duplicated card deck
+    let gameCardsReady = useShuffle(generateGameDeck(useShuffle(gameCards),diffLevel))
 
     return (
         <>

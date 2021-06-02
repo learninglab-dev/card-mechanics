@@ -3,6 +3,7 @@ import Card from "./Card"
 import {DataContext} from "../data/GetCards";
 import React, {useContext} from 'react'
 import image1 from "../images/1.jpg"
+import useShuffle from '../hooks/useShuffle'
 
 
 
@@ -148,10 +149,12 @@ const styles={
 export default function Gallery(){
     // const data = useContext(DataContext)
     const data = fabData
+    const dataShuffled = useShuffle(data)
+
 
     return (
         <div className="container" style={styles.gridContainer}>
-            {data.map((data, index) => {
+            {dataShuffled.map((data, index) => {
 
                 return (
                     <li key={index}>

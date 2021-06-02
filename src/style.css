@@ -83,14 +83,18 @@ li {
     text-align: center;
 }
 
+.infoPane a {
+    color: aqua;
+}
+
 .infoPane{
 
     color: #FFFFFF;
     font-family: "Lato", sans-serif;
-    text-transform: uppercase;
+    /*text-transform: uppercase;*/
     text-align: center;
     margin-top: 20vh;
-    border: 2pt solid white;
+    /*border: 2pt solid white;*/
 }
 
 .header-class{

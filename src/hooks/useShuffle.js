@@ -1,7 +1,5 @@
 import React from 'react'
 
-
-// TODO Refactor into useShuffle hook so it can be used for gallery too
 // shamelessly stolen shuffle function: https://bost.ocks.org/mike/shuffle/
 export default function Shuffle(array) {
 
