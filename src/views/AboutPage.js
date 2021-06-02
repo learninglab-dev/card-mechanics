@@ -1,6 +1,5 @@
 import React from "react";
 import { Pagination } from "react-bootstrap";
-
 import ReactPageScroller from "react-page-scroller";
 import AboutCourse from "./AboutCourse";
 import AboutPete from "./AboutPete";

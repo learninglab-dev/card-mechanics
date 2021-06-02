@@ -1,15 +1,14 @@
 /** @jsxImportSource theme-ui */
 import React from "react";
-import Card from "./Card";
 import '../style.css'
-import Game from './GamePage'
+import Game from './Game'
 
 
 export default function LaunchGame(){
 
     const [diffLevel, setDiffLevel] = React.useState(null)
     const [gameState,setGameState] = React.useState(false) //this gets drilled down to Board TODO switch to context? :/
-    const [score, setScore] = React.useState(false)
+
 
     return (
       <div className={"centered space-between"}>
@@ -19,6 +18,7 @@ export default function LaunchGame(){
                   diffLevel={diffLevel}
                   gameState={gameState}
                   setGameState={setGameState}
+
               />
           ) : (
               <h2 >Choose a difficulty to begin!</h2>
@@ -26,7 +26,7 @@ export default function LaunchGame(){
         <div className="container">
           <div className={"center-text space-between"}>
             {diffLevel === null ? (
-                <React.Fragment className={"space-between"} >
+                <React.Fragment >
                   <button className={"button"} onClick={() => setDiffLevel(6)}>Easy</button>
                   <button className={"button"} onClick={() => setDiffLevel(9)}>Medium</button>
                   <button className={"button"} onClick={() => setDiffLevel(12)}>Hard</button>

@@ -27,22 +27,38 @@ const styles= {
 
 let f //yes, let f
 
-export default function Board ({cards,gameState,setGameState}){
+export default function Board ({cards,gameState,setGameState,score,setScore,diffLevel}){
 
 
     const [flippedArray, setFlippedArray] = React.useState(Array(cards.length).fill(false))
     const [matchedArray, setMatchedArray] = React.useState(Array(cards.length).fill(false))
     const [flippedCount, setFlippedCount] = React.useState(0) // for determining score?
     const [buttonDisabled, setButtonDisabled]= React.useState(false)
+    const [startTime, setStartTime] = React.useState(performance.now())
 
 
     // end of game condition
     React.useEffect(()=>{
         setTimeout(()=>{
-            if(matchedArray.every(e=>e===true)){setGameState(true)}
-        },1000)
+            if(matchedArray.every(e=>e===true)){
+                setGameState(true)
+                calculateScore(flippedCount,performance.now())
+            }
+
+        },750)
 
     },[matchedArray])
+
+    const calculateScore=(flippedCount,finishTime)=>{
+        let totalTime= Math.round((finishTime-startTime)/5000)
+        let extraFlip=flippedCount-(diffLevel*2)
+
+        // total time - minimum amount of time necessary to flip all cards, divided by 2 => penalizes those who take more time
+        // but time is weighted less than number of extra flips
+        // so if you take longer but only have a few extra clips above the bare minimum, your score with be lower than someone that clicked a lot in a very short amount of time
+        setScore(100-(totalTime-diffLevel*2)-extraFlip*10)
+
+    }
 
 
     const checkMatch=(i1,id1,i2,id2)=>{

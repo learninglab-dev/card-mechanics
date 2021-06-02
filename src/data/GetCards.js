@@ -17,7 +17,7 @@ import {
   useRouteMatch
 } from 'react-router-dom'
 import { Ready } from './Firebase'
-import LaunchGame from '../views/LaunchGame'
+import firebaseConfig from './Firebase'
 import AppRouter from "../Router";
 
 export const DataContext = createContext();
@@ -30,6 +30,22 @@ export default function GetCards() {
   // const history = useHistory()
   // const playing = useRouteMatch('/monsters/memorygame')?.isExact
 
+  //New Code /////
+
+  // useEffect(() => {
+  //   if (instance) {
+  //     const storage = firebase.storage().ref()
+  //
+  //     Object.keys(fbFilenames).forEach( file => {
+  //       storage.child(`active/${fbFilenames[file]}`).getDownloadURL()
+  //           .then(url => {
+  //             setImages(images => ({...images, [file]:url}))
+  //           })
+  //           .catch(err => alert(err))
+  //     })
+  //   }
+  // }, [instance])
+  ///
 
   useEffect(() => {
     if (ready) {

@@ -104,7 +104,7 @@ function generateGameDeck(gameCards,numCards){
 }
 
 export default function Game({diffLevel, gameState,setGameState}){
-
+    const [score,setScore] = React.useState(0) // this should live here if I want to display the score on the Won Page
 
     const gameCards = fabData
     // const gameCards = useContext(DataContext)
@@ -117,13 +117,21 @@ export default function Game({diffLevel, gameState,setGameState}){
             {!gameState &&
             <div className="game">
                 <div className={"game-board"}>
-                    <Board cards={gameCardsReady} gameState={gameState} setGameState={setGameState}/>
+                    <Board
+                        cards={gameCardsReady}
+                        gameState={gameState}
+                        setGameState={setGameState}
+                        score={score}
+                        setScore={setScore}
+                        diffLevel={diffLevel}
+                    />
                 </div>
             </div>
             }
             {gameState &&
             <div>
                 <h2>YOU WON!</h2>
+                <h4 className={"center-text bmargin-2"}> Score: {score}</h4>
             </div>}
         </>
 
