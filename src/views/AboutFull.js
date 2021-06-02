@@ -11,26 +11,28 @@ import SecondComponent from "./CourseInfo";
 
 import "../style.css";
 
-export default class FullPage extends React.Component {
-    constructor(props) {
-        super(props);
-        this.state = { currentPage: null };
-    }
+export default function FullPage() {
+    // constructor(props) {
+    //     super(props);
+    //     this.state = { currentPage: null };
+    // }
 
-    handlePageChange = number => {
-        this.setState({ currentPage: number });
+    const [currentPage,setCurrentPage] = React.useState(null)
+
+    const handlePageChange = (number) => {
+        setCurrentPage(number);
     };
 
-    handleBeforePageChange = number => {
+    const handleBeforePageChange = (number) => {
         console.log(number);
     };
 
-    getPagesNumbers = () => {
+    const getPagesNumbers = () => {
         const pageNumbers = [];
 
         for (let i = 1; i <= 5; i++) {
             pageNumbers.push(
-                <Pagination.Item key={i} eventKey={i - 1} onSelect={this.handlePageChange}>
+                <Pagination.Item key={i} eventKey={i - 1} onSelect={handlePageChange}>
                     {i}
                 </Pagination.Item>,
             );
@@ -40,14 +42,14 @@ export default class FullPage extends React.Component {
     };
 
     render() {
-        const pagesNumbers = this.getPagesNumbers();
+        const pagesNumbers = getPagesNumbers();
 
         return (
             <React.Fragment>
                 <ReactPageScroller
-                    pageOnChange={this.handlePageChange}
-                    onBeforePageScroll={this.handleBeforePageChange}
-                    customPageNumber={this.state.currentPage}
+                    pageOnChange={handlePageChange}
+                    onBeforePageScroll={handleBeforePageChange}
+                    customPageNumber={currentPage}
                 >
                     <FirstComponent />
                     <SecondComponent />

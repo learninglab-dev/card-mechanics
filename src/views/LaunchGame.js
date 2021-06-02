@@ -9,6 +9,7 @@ export default function LaunchGame(){
 
     const [diffLevel, setDiffLevel] = React.useState(null)
     const [gameState,setGameState] = React.useState(false) //this gets drilled down to Board TODO switch to context? :/
+    const [score, setScore] = React.useState(false)
 
     return (
       <div className={"centered space-between"}>
