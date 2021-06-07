@@ -39,7 +39,7 @@ export default class AboutPage extends React.Component {
         const pagesNumbers = this.getPagesNumbers();
 
         return (
-            <React.Fragment className={"page-container"}>
+            <React.Fragment>
                 <ReactPageScroller
                     pageOnChange={this.handlePageChange}
                     onBeforePageScroll={this.handleBeforePageChange}

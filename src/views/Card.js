@@ -26,7 +26,7 @@ export default function Card ({data, style,bool,flippedStatus,onClick}){
           setShow(true)
       }
 
-    const texttodisplay = {name: data.name, creator: data.by}
+    const texttodisplay = {name: data.name, creator: data.creator}
 
 
     // there's definitely a better way to do this with state, but for now....
@@ -35,7 +35,7 @@ export default function Card ({data, style,bool,flippedStatus,onClick}){
             <div className="card" style={tileStyle}>
                 <Tooltip text={texttodisplay}>
                     <img
-                        src={data.image}
+                        src={data.image} //replace with url from firebase image useEffect
                         alt={data.name}
                         style={tileStyle}
                         onClick={handleShow}
@@ -76,7 +76,7 @@ export default function Card ({data, style,bool,flippedStatus,onClick}){
                                     <Row>
                                         <Modal.Title>
                                             <h2>{data.name}</h2>
-                                            <h4>created by {data.by}, {data.year}</h4>
+                                            <h4>created by {data.creator}, {data.year}</h4>
                                         </Modal.Title>
                                     </Row>
                                     <Row className={"monster-mythos"}>

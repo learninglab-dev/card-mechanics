@@ -14,6 +14,14 @@ export const Ready = createContext()
 export default function Firebase() {
   const [instance, setInstance] = useState(false)
 
+  // useEffect(() => {
+  //   if (instance) {
+  //     const storage = firebase.storage().ref()
+  //
+
+  //   }
+  // }, [instance])
+
   useEffect(() => {
     firebase.initializeApp(firebaseConfig)
     firebase.analytics()
